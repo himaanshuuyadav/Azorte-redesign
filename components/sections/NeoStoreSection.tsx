@@ -64,6 +64,7 @@ export function NeoStoreSection() {
         }
       }
       
+      // Call synchronously so GSAP can calculate exact ScrollTrigger positions based on the updated layout
       updatePosition()
       window.addEventListener('resize', updatePosition)
 
@@ -283,7 +284,7 @@ export function NeoStoreSection() {
                       muted 
                       loop 
                       playsInline 
-                      preload="metadata"
+                      preload="none"
                       className="h-full w-full object-cover"
                     />
                     <div className="absolute inset-0 bg-azorte-black/10 mix-blend-overlay pointer-events-none" />

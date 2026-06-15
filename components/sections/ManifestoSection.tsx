@@ -249,16 +249,15 @@ export function ManifestoSection() {
                 className="phase-transition w-full h-full relative"
               >
                 {PHASES.map((p, i) => (
-                  <Image
-                    key={p.id}
-                    src={p.image}
-                    alt=""
-                    width={p.width}
-                    height={p.height}
-                    className={`h-full w-auto max-w-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${
+                    <Image
+                      key={p.id}
+                      src={p.image}
+                      alt=""
+                      fill
+                      className={`object-cover ${
                       activePhase === i ? 'opacity-100 z-10' : 'opacity-0 z-0'
                     }`}
-                    priority={true}
+                    priority={i === 0}
                     sizes="100vw"
                   />
                 ))}
