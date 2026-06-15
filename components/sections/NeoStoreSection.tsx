@@ -64,8 +64,12 @@ export function NeoStoreSection() {
         }
       }
       
-      // Call synchronously so GSAP can calculate exact ScrollTrigger positions based on the updated layout
-      updatePosition()
+      // Prevent forced synchronous layout on mount by deferring to next frame
+      // We MUST call ScrollTrigger.refresh() after moving the container so GSAP recalculates triggers!
+      requestAnimationFrame(() => {
+        updatePosition()
+        ScrollTrigger.refresh()
+      })
       window.addEventListener('resize', updatePosition)
 
       // Intro reveal
