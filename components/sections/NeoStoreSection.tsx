@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState, useEffect } from 'react'
+import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -42,33 +42,11 @@ export function NeoStoreSection() {
   const svgContainerRef = useRef<HTMLDivElement>(null)
   const featureRefs = useRef<(HTMLDivElement | null)[]>([])
   const conclusionRef = useRef<HTMLDivElement>(null)
-  const [isNearView, setIsNearView] = useState(false)
   const prefersReducedMotion = useReducedMotion()
-
-  // Defer GSAP initialization until the section is close to entering the viewport.
-  // This completely eliminates the Lighthouse "Forced Reflow" TBT penalty on initial page load,
-  // while keeping SSR intact for SEO!
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsNearView(true)
-          observer.disconnect()
-        }
-      },
-      { rootMargin: '1500px 0px' } // Trigger 1500px before scrolling into view
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
 
   useGSAP(
     () => {
-      if (prefersReducedMotion || !isNearView) return
+      if (prefersReducedMotion) return
 
       // Dynamically position the SVG container to start EXACTLY at the center divider
       const updatePosition = () => {
@@ -207,7 +185,7 @@ export function NeoStoreSection() {
         window.removeEventListener('resize', updatePosition)
       }
     },
-    [prefersReducedMotion, isNearView],
+    [prefersReducedMotion],
     sectionRef
   )
 
@@ -310,7 +288,7 @@ export function NeoStoreSection() {
                       muted 
                       loop 
                       playsInline 
-                      preload={isNearView ? "auto" : "none"}
+                      preload="none"
                       className="h-full w-full object-cover"
                     />
                     <div className="absolute inset-0 bg-azorte-black/10 mix-blend-overlay pointer-events-none" />
