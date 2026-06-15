@@ -163,7 +163,6 @@ export function HeroSection() {
           muted
           loop
           playsInline
-          poster="/placeholders/hero.webp"
           onLoadedData={() => setIsLoaded(true)}
           className="absolute inset-0 h-full w-full object-cover scale-[1.05] brightness-[0.85]"
         >
@@ -176,7 +175,11 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-azorte-black/50 via-azorte-black/15 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-azorte-black/40 via-transparent to-transparent" />
 
-
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-[42%] -translate-y-1/2 flex select-none items-center justify-center">
+        <span className="text-[clamp(6.5rem,18vw,32rem)] font-extrabold leading-none tracking-[0.06em] text-azorte-white/[0.04]">
+          AZORTE
+        </span>
+      </div>
 
       <div className="relative z-10 flex h-full flex-col justify-end pb-20 md:pb-32">
         <Container>
