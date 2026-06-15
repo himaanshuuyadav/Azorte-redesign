@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
@@ -50,6 +50,7 @@ export function ManifestoSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const prefersReducedMotion = useReducedMotion()
   const [activePhase, setActivePhase] = useState(0)
+  const [imageLoaded, setImageLoaded] = useState(true)
   const phaseRef = useRef(0)
 
   useGSAP(
@@ -76,14 +77,8 @@ export function ManifestoSection() {
           ease: 'power2.in',
           overwrite: true,
           onComplete: () => {
+            setImageLoaded(false)
             setActivePhase(nextPhase)
-            
-            requestAnimationFrame(() => {
-              gsap.fromTo(targets,
-                { opacity: 0, y: 40, scale: 0.95 },
-                { opacity: 1, y: 0, scale: 1, duration: isMobile ? 0.3 : 0.4, ease: 'power2.out', overwrite: true }
-              )
-            })
           },
         })
       }
@@ -154,6 +149,21 @@ export function ManifestoSection() {
     sectionRef
   )
 
+  useEffect(() => {
+    if (imageLoaded && sectionRef.current) {
+      const targets = sectionRef.current.querySelectorAll<HTMLElement>('.phase-transition')
+      if (targets.length > 0) {
+        // We use requestAnimationFrame to ensure React has fully committed the DOM
+        requestAnimationFrame(() => {
+          gsap.fromTo(targets, 
+            { opacity: 0, y: 40, scale: 0.95 },
+            { opacity: 1, y: 0, scale: 1, duration: window.innerWidth < 768 ? 0.3 : 0.4, ease: 'power2.out', overwrite: true }
+          )
+        })
+      }
+    }
+  }, [activePhase, imageLoaded])
+
   const phase = PHASES[activePhase]
   const coral = '#FF5A3C'
   const grey = '#8A8A8A'
@@ -223,6 +233,7 @@ export function ManifestoSection() {
                     className="h-full w-auto max-w-none"
                     priority={activePhase === 0}
                     sizes="45vw"
+                    onLoad={() => setImageLoaded(true)}
                   />
                 </div>
               </div>
@@ -250,6 +261,7 @@ export function ManifestoSection() {
                   height={phase.height}
                   className="h-full w-auto max-w-none"
                   sizes="100vw"
+                  onLoad={() => setImageLoaded(true)}
                 />
               </div>
             </div>
