@@ -33,6 +33,22 @@ export function StoreDiscovery() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedState, setSelectedState] = useState<string | null>(null)
   const [hoveredState, setHoveredState] = useState<string | null>(null)
+  const [isNearView, setIsNearView] = useState(false)
+
+  // Defer GSAP initialization
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsNearView(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '1500px 0px' }
+    )
+    if (sectionRef.current) observer.observe(sectionRef.current)
+    return () => observer.disconnect()
+  }, [])
 
   // Filtering
   const filteredStores = useMemo(() => {
@@ -58,7 +74,7 @@ export function StoreDiscovery() {
 
   // 1. Initial Scroll Reveal + Counters
   useGSAP(() => {
-    if (prefersReducedMotion) return
+    if (prefersReducedMotion || !isNearView) return
 
     // Entrance Animation
     const tl = gsap.timeline({
@@ -88,7 +104,7 @@ export function StoreDiscovery() {
         if (stateCountRef.current) stateCountRef.current.innerText = Math.floor(counts.states) + '+'
       }
     })
-  }, [prefersReducedMotion], sectionRef)
+  }, [prefersReducedMotion, isNearView], sectionRef)
 
   // 2. Bind SVG DOM Events (Hover/Click natively on paths)
   useEffect(() => {
