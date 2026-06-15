@@ -1,0 +1,241 @@
+1 State: Assam
+I) City: Guwahati
+address: Golden Heights Building, Ground Floor, GS Rd, Christian Basti,Guwahati, Assam 781005
+link to redirect: https://maps.google.com/maps?cid=2998440461937042814
+
+
+2 State: Bihar
+I) City: Patna
+address: Durga Aspire, GF, FF, SF, E Boring Canal Road, Sri Krishna Nagar,Patna, Bihar 800001
+link to redirect: https://maps.google.com/maps?cid=10000933735184038347
+
+
+3 State: chhattisgarh
+I) City: raipur
+address: Raipur City Center Mall, Orange eye resort mandi, piche, Devendra Nagar, Dumartara,Raipur, Chhattisgarh 492004
+link to redirect: https://maps.google.com/maps?cid=12662502227660859802
+
+
+4 State: Delhi
+I) City: Delhi
+address: Vegas Mall, 1st Floor, Pocket 1, Sector 14,Dwarka, Delhi 110075
+link to redirect: https://maps.google.com/maps?cid=805195176445906716
+
+
+5 State: Goa
+I) City: Madgaon
+address: Ground & First Floor, Sapana Grandeur, Aquem Alto, Davarlim, Madgaon, Goa 403601
+link to redirect: https://maps.google.com/maps?cid=2566853771375000917
+
+
+6 State: Gujrat
+I) City: Ahmedabad
+address: Stratum @ Venus Grounds, Ground Floor, Near Jhansi ki Rani Statue, Nehru Nagar, Satellite, Ahmedabad, Gujarat 380015
+link to redirect: https://maps.google.com/maps?cid=636671844697668759
+
+II) City: vastrapur
+address: Unit no LG 01, Final PLOT NUMBER 216 PAIKI OF VASTRAPUR , TPS 1, Ahmedabad, Gujarat 380054
+link to redirect: https://maps.google.com/maps?cid=9988974030706445638
+
+III) City: jamnagar
+address: The Mall, Reliance Greens, Motikhavdi, Jamnagar, Gujarat 361142
+link to redirect: https://maps.google.com/maps?cid=10407521186792209191
+
+IV) City: surat
+address: Aashirwad High Street Mall, First & Second Floor, City Light Rd, City Light Town, Athwa, Surat, Gujarat 395007
+link to redirect: https://maps.google.com/maps?cid=18039722162813121078
+
+V) City: surat
+address: Vip Road, Canal Road Corner, Near CB Patel Club, Surat, Gujarat 395007
+link to redirect: https://maps.google.com/maps?cid=17637038596287862063
+
+VI) City: vadodara
+address: 73 East Avenue, Sarabhai Campus, Ground & First Floor Near Genda Circle, Road, Gorwa, Vadodara, Gujarat 390023
+link to redirect: https://maps.google.com/maps?cid=11278882604083678355
+
+7 State: Haryana
+I) City: faridabad
+address: Pacific Mall, SHGF05, GF & SH1F06, FF, Sec 20, Faridabad, Haryana 121001
+link to redirect: https://maps.google.com/maps?cid=4903516040766581576
+
+II) City: gurugram
+address: Airia Mall, Ground & First Floor, Badshahpur Sohna Rd Hwy, Sector 68, Gurugram, Haryana 122103
+link to redirect: https://maps.google.com/maps?cid=13130417438333534640
+
+III) City: gurugram
+address: GF, FF, SF, SCO No. 335 , 336 and 337, Sector 29,, Urban Estate, Tehsil Wazirabad, Gurugram, Haryana 122007
+link to redirect: https://maps.google.com/maps?cid=6350399897037277905
+
+
+8 State: jharkhand
+I) City: ranchi
+address: JD Hi Street Mall, Ground floor, Mahatma Gandhi Main Rd, opposite GEL Church Complex, Hindpiri,Ranchi, Jharkhand 834001
+link to redirect: https://maps.google.com/maps?cid=17560674622746922634
+
+II) City: ranchi
+address: Pristine Paradise, GF,FF,SF, Opp CMPDI, Kanke Road, Missirgonda, Kanke, Ranchi, Jharkhand 834008
+link to redirect: https://maps.google.com/maps?cid=615285039926741726
+
+
+9 State: karnataka
+I) City: bangalore
+address: 1MG Mall, Level 2 & 3, Mahatma Gandhi Rd, Yellappa Garden, Yellappa Chetty Layou, Sivanchetti Gardens,Bangalore, Karnataka 560008
+link to redirect: https://maps.google.com/maps?cid=16071262156262714770
+
+II) City: bangalore
+address: Ground Floor, First Floor & Second Floor Ashrith Aries, 53/1 Sarjapur Main Road, Bellandur - Doddakannelli Rd, opposite HP Petrol Pump, Countryside Layout, Rainbow Drive,Bangalore, Karnataka 560035
+link to redirect: https://maps.google.com/maps?cid=7559890498996735781
+
+III) City: bangalore
+address: Phoenix Mall fo Asia, North Bengaluru, Sahakar Nagar, Bangalore, Karnataka 560092
+link to redirect: https://maps.google.com/maps?cid=9047290282962276301
+
+IV) City: bangalore
+address: LULU Mall Bengaluru, Unit FF-01A, FF, M 19/2, Mysore Deviation Road, Gopalapura, Bangalore, Karnataka 560023
+link to redirect: https://maps.google.com/maps?cid=12418798000095739801
+
+V) City: bangalore
+address: Shravanee Premier, Ground Floor, Ashoka Pillar Road, 2nd Block, Jayanagar, Bangalore, Karnataka 560011
+link to redirect: https://maps.google.com/maps?cid=13777387649282268776
+
+VI) City: bangalore
+address: Vega City Mall, Lower Ground, Bannerghatta Rd, Dollar Layout, BTM 2nd Stage, BTM Layout, Bangalore, Karnataka 560076
+link to redirect: https://maps.google.com/maps?cid=525724603389915281
+
+VII) City: bengaluru
+address: GF, FF, SF, No 2326, BBMP E-Katha, property No 1916/2326,Sector1,HSR Layout Sarjapur Road,Bengaluru, Karnataka 560102
+link to redirect: https://maps.google.com/maps?cid=8325235902428149778
+
+VIII) City: udupi
+address: Ground & First Floor, Amrut Enclave, Manipal Road, next to Mandavi Times Square Mall, Kalsanka, Kunjibettu,Udupi, Karnataka 576101
+link to redirect: https://maps.google.com/maps?cid=992853230218106387
+
+
+10 State: maharashtra
+I) City: mumbai
+address: Sky City Mall, Devipada, Khande Rao Dongari, Borivali, Mumbai, Maharashtra 400066
+link to redirect: https://maps.google.com/maps?cid=6733097277157007344
+
+II) City: mumbai
+address: Infiniti Mall Malad, Lower Ground Floor, New Link Rd Malad, Mindspace, Malad West, Mumbai, Maharashtra 400064
+link to redirect: https://maps.google.com/maps?cid=17108807026232691607
+
+III) City: mumbai
+address: Nexus Seawoods Mall, First Floor, Nerul East, Sector 30, Nerul, Mumbai, Maharashtra 400706
+link to redirect: https://maps.google.com/maps?cid=942013352869653633
+
+IV) City: kurla
+address: Phoenix Marketcity, Lal Bahadur Shastri Marg, Patelwadi Kurla, Kurla West, Kurla, Mumbai, Maharashtra 400070
+link to redirect: https://maps.google.com/maps?cid=16359072074190743569
+
+V) City: ghatkopar
+address: R CITY, Lal Bahadur Shastri Marg, Amrut Nagar, Ghatkopar West, Mumbai, Maharashtra 400086
+link to redirect: https://maps.google.com/maps?cid=11028291065723251739
+
+VI) City: navi mumbai
+address: Inorbit Mall, Ground Floor, Palm Beach Rd, Sector 30A, Vashi, Navi Mumbai, Maharashtra 400705
+link to redirect: https://maps.google.com/maps?cid=5822949463297257251
+
+VII) City: pune
+address: Amanora Mall, GF, Mundhwa - Kharadi Rd, Amanora Park Town, Hadapsar, Pune, Maharashtra 411028
+link to redirect: https://maps.google.com/maps?cid=17833686963643680131
+
+VIII) City: pune
+address: Phoenix Mall of the Millennium, Ground and Upper Ground, Near Pune - Bengaluru Highway, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad,Pune, Maharashtra 411057
+link to redirect: https://maps.google.com/maps?cid=9040779282873269279
+
+IX) City: pune
+address: The Pavillion Mall, Ground, First & Second Floor, Senapati Bapat Rd, Vaiavadi, Laxmi Society, Model Colony, Shivajinagar,Pune, Maharashtra 411016
+link to redirect: https://maps.google.com/maps?cid=16368096937969824011
+
+X) City: thane
+address: Viviana Mall, Ground Floor, On Eastern Express Highway, Service Rd, Thane West, Thane, Maharashtra 400606
+link to redirect: https://maps.google.com/maps?cid=16975647048009132340
+
+
+11 State: punjab
+I) City: amritsar
+address: Nexus Amritsar Mall, First Floor, MBM Farm, Grand Trunk Rd, Amritsar, Punjab 143001
+link to redirect: https://maps.google.com/maps?cid=5623931291519465518
+
+
+12 State: rajasthan
+I) City: jaipur
+address: Ground floor, GT Square, Gaurav Tower Marg, Kalyan Colony, D-Block, Sector 4, Malviya Nagar, Jaipur, Rajasthan 302017
+link to redirect: https://maps.google.com/maps?cid=10792805990118362179
+
+II) City: udaipur
+address: Ground & First floor, Nexus Celebration Mall, Bhuwana Rd, Opposite Devendra Dham, Pulla Bhuwana, Bhuwana,Udaipur, Rajasthan 313004
+link to redirect: https://maps.google.com/maps?cid=13057491112059421959
+
+
+13 State: 
+I) City: chennai
+address: PHOENIX MARKET CITY, 142, Velachery Road, Indira Gandhi Nagar, Velachery, Chennai, Tamil Nadu 600042
+link to redirect: https://maps.google.com/maps?cid=4259926925521205234
+
+II) City: chennai
+address: VR Chennai, First Floor, Unit F-5, 6A, Shop No. 44, Pillaiyar Koil Street, Jawahar Nehru Road, Anna Nagar, Koyembedu,Chennai, Tamil Nadu 600040
+link to redirect: https://maps.google.com/maps?cid=3293696232705338525
+
+
+14 State: telangana
+I) City: Hyderabad
+address: Cyberabad Level 1, Inorbit Mall, APIIC Software Layout, Madhapur, Hyderabad, Telangana 500081
+link to redirect: https://maps.google.com/maps?cid=11316546666216400417
+
+II) City: Hyderabad
+address: Lakeshore Mall FCHF+53P, Amma Mess Road, Prashanti Nagar, Y Junction Kukatpally, Hyderabad, Telangana 500072
+link to redirect: https://maps.google.com/maps?cid=15888093840466413453
+
+III) City: Hyderabad
+address: Upper Ground and 1st Floor, Sarath City Capital Mall, Gachibowli - Miyapur Road, Whitefields, HITEC City, Kondapur,Hyderabad, Telangana 500084
+link to redirect: https://maps.google.com/maps?cid=9207982883882054338
+
+IV) City: Hyderabad
+address: Aparna Neo Mall, Upper Ground Floor & First Floor, Nallagandla Road, Nallagandla, Telangana 500019
+link to redirect: https://maps.google.com/maps?cid=12318334423873306575
+
+
+15 State: uttar pradesh
+I) City: lucknow
+address: First Floor, Lulu Shoping Mall, Amar Shaheed Path, Gold City, Sector B Ansal API, Lucknow, Uttar Pradesh 226030
+link to redirect: https://maps.google.com/maps?cid=15942643917493962627
+
+II) City: lucknow
+address: Phoenix Palassio Market City Mall, 1st Floor, Unit No. - F56, Sector 7, Gomti Nagar Extension, Lucknow, Uttar Pradesh 226010
+link to redirect: https://maps.google.com/maps?cid=11958305717295194557
+
+
+16 State: uttarakhand
+I) City: dehradun
+address: Ground & Upper Ground Floor, Mall of Dehradun, IIP, Mohkampur, Mohkam Pur Khurd, Dehradun, Uttarakhand 248005
+link to redirect: https://maps.google.com/maps?cid=11752314498220143981
+
+
+
+
+
+other links to connect:
+
+1. explore collection button both cta and navbar button should scroll to collection section of the website
+2. discover neostore button both cta and navbar button should scroll to neostore section 
+3. shop on ajio button both navbar and final cta section and in footer should redirect to this link: https://azorte.ajio.com/
+4. collection section:
+I explore women: https://azorte.ajio.com/s/women-194622
+II explore men: https://azorte.ajio.com/s/men-192679
+III explore az: https://azorte.ajio.com/c/az-youth-1776258536
+IV explore proearth: https://azorte.ajio.com/s/proearth-192772
+V explore ethnic: https://azorte.ajio.com/s/fusionandethniccollection-193804
+VI explore kids: https://azorte.ajio.com/s/kids-192774
+
+
+5. footer section:
+yt icon: https://www.youtube.com/@AzorteStores
+insta icon: https://www.instagram.com/azortestore/
+twitter icon: https://x.com/azortestores
+
+
+
+link other footer links also to website from the above data if possible
+
