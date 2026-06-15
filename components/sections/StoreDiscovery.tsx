@@ -163,7 +163,7 @@ export function StoreDiscovery() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* LEFT: Header, Search, List */}
-          <div ref={leftColRef} className="lg:col-span-5 flex flex-col h-[500px] lg:h-[700px]">
+          <div ref={leftColRef} className="lg:col-span-5 flex flex-col h-[550px] sm:h-[600px] lg:h-[700px]">
             <span className="text-caption uppercase tracking-[0.15em] text-azorte-amber">
               STORE NETWORK
             </span>
@@ -209,18 +209,18 @@ export function StoreDiscovery() {
               )}
 
               {/* View 1: All States List */}
-              <div data-lenis-prevent="true" className={`absolute inset-0 overflow-y-auto overscroll-contain pr-2 transition-all duration-500 ${selectedState ? '-translate-x-10 opacity-0 pointer-events-none' : 'translate-x-0 opacity-100'}`}>
+              <div data-lenis-prevent="true" className={`absolute inset-0 overflow-y-auto overscroll-contain pr-0 lg:pr-2 pb-12 transition-all duration-500 ${selectedState ? '-translate-x-10 opacity-0 pointer-events-none' : 'translate-x-0 opacity-100'}`}>
                 {activeStatesList.map(state => (
                   <button 
                     key={state}
                     onMouseEnter={() => setHoveredState(state)}
                     onMouseLeave={() => setHoveredState(null)}
                     onClick={() => setSelectedState(state)}
-                    className={`w-full flex items-center justify-between p-5 mb-3 rounded-[20px] border transition-all duration-250 ${state === targetState ? 'bg-azorte-grey-800/80 border-azorte-amber text-azorte-amber shadow-[0_0_15px_rgba(217,119,6,0.15)] -translate-y-[2px]' : 'bg-azorte-grey-900/20 border-azorte-grey-800 hover:bg-azorte-grey-900 hover:border-azorte-grey-600 hover:-translate-y-[2px] hover:shadow-lg text-azorte-white'}`}
+                    className={`w-full flex items-center justify-between p-4 sm:p-5 mb-3 sm:mb-4 rounded-[20px] border transition-all duration-250 min-h-[60px] ${state === targetState ? 'bg-azorte-grey-800/80 border-azorte-amber text-azorte-amber shadow-[0_0_15px_rgba(217,119,6,0.15)] -translate-y-[2px]' : 'bg-azorte-grey-900/20 border-azorte-grey-800 hover:bg-azorte-grey-900 hover:border-azorte-grey-600 hover:-translate-y-[2px] hover:shadow-lg text-azorte-white'}`}
                   >
                     <div className="flex items-center gap-4">
                       <span className="text-[10px] tracking-[0.2em] opacity-60">▶</span>
-                      <span className="text-headline font-bold tracking-wide">{state}</span>
+                      <span className="text-body-lg sm:text-headline font-bold tracking-wide">{state}</span>
                     </div>
                     <span className="text-caption font-medium opacity-60">({statesMap[state].length})</span>
                   </button>
@@ -228,14 +228,14 @@ export function StoreDiscovery() {
               </div>
 
               {/* View 2: Selected State Details */}
-              <div data-lenis-prevent="true" className={`absolute inset-0 overflow-y-auto overscroll-contain pr-2 flex flex-col transition-all duration-500 ${selectedState ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0 pointer-events-none'}`}>
+              <div data-lenis-prevent="true" className={`absolute inset-0 overflow-y-auto overscroll-contain pr-0 lg:pr-2 pb-12 flex flex-col transition-all duration-500 ${selectedState ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0 pointer-events-none'}`}>
                 <button 
                   onClick={() => { setSelectedState(null); setSearchQuery('') }} 
-                  className="flex items-center gap-2 text-caption font-bold text-azorte-grey-500 hover:text-azorte-amber transition-colors mb-6 w-max"
+                  className="flex items-center gap-2 text-caption font-bold text-azorte-grey-500 hover:text-azorte-amber transition-colors mb-6 w-max min-h-[44px] py-2"
                 >
                   &larr; ALL STATES
                 </button>
-                <h3 className="text-display-sm font-bold text-azorte-white mb-6 uppercase">▼ {selectedState}</h3>
+                <h3 className="text-2xl sm:text-display-sm font-bold text-azorte-white mb-8 uppercase tracking-tight">▼ {selectedState}</h3>
 
                 {selectedState && Object.entries(
                   statesMap[selectedState]?.reduce((acc, store) => {
@@ -244,21 +244,22 @@ export function StoreDiscovery() {
                     return acc
                   }, {} as Record<string, typeof STORE_DATA>) || {}
                 ).map(([city, stores]) => (
-                  <div key={city} className="mb-6">
-                    <h4 className="text-headline font-bold text-azorte-white mb-4 opacity-80">{city}</h4>
+                  <div key={city} className="mb-10">
+                    <h4 className="text-body font-medium tracking-[0.1em] uppercase text-azorte-grey-400 mb-5">{city}</h4>
                     {stores.map(store => (
-                      <div key={store.mall} className="p-5 mb-4 rounded-[20px] border border-azorte-grey-800 bg-azorte-grey-900/40 hover:bg-azorte-grey-900 hover:border-azorte-grey-600 hover:-translate-y-[2px] hover:shadow-lg transition-all duration-250 group flex justify-between items-center">
-                        <div>
-                          <h5 className="text-headline font-bold text-azorte-white">{store.mall}</h5>
-                          <p className="text-body-sm text-azorte-grey-400 mt-2">{store.address}</p>
+                      <div key={store.mall} className="p-5 mb-4 rounded-[20px] border border-azorte-grey-800 bg-azorte-grey-900/40 hover:bg-azorte-grey-900 hover:border-azorte-grey-600 hover:-translate-y-[2px] hover:shadow-lg transition-all duration-250 group flex flex-col sm:flex-row justify-between items-start sm:items-center gap-5 sm:gap-4">
+                        <div className="flex-1 pr-0 sm:pr-4">
+                          <h5 className="text-body-lg sm:text-headline font-bold text-azorte-white leading-tight">{store.mall}</h5>
+                          <p className="text-body-sm text-azorte-grey-400 mt-2 sm:mt-2.5 leading-relaxed">{store.address}</p>
                         </div>
                         <a 
                           href={store.mapsUrl} 
                           target="_blank" 
                           rel="noopener noreferrer" 
-                          className="ml-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-azorte-grey-800 transition-colors group-hover:bg-azorte-amber group-hover:text-azorte-black text-azorte-white font-bold"
+                          className="flex h-12 w-full sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-full sm:rounded-full rounded-xl bg-azorte-grey-800 transition-colors hover:bg-azorte-amber hover:text-azorte-black text-azorte-white font-bold text-sm tracking-widest sm:tracking-normal active:scale-95"
                         >
-                          ↗
+                          <span className="sm:hidden mr-2 uppercase">Get Directions</span>
+                          <span className="text-lg">↗</span>
                         </a>
                       </div>
                     ))}

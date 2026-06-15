@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState } from 'react'
 import Image from 'next/image'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
@@ -50,7 +50,6 @@ export function ManifestoSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const prefersReducedMotion = useReducedMotion()
   const [activePhase, setActivePhase] = useState(0)
-  const [imageLoaded, setImageLoaded] = useState(true)
   const phaseRef = useRef(0)
 
   useGSAP(
@@ -77,8 +76,14 @@ export function ManifestoSection() {
           ease: 'power2.in',
           overwrite: true,
           onComplete: () => {
-            setImageLoaded(false)
             setActivePhase(nextPhase)
+            
+            requestAnimationFrame(() => {
+              gsap.fromTo(targets,
+                { opacity: 0, y: 40, scale: 0.95 },
+                { opacity: 1, y: 0, scale: 1, duration: isMobile ? 0.3 : 0.4, ease: 'power2.out', overwrite: true }
+              )
+            })
           },
         })
       }
@@ -149,21 +154,6 @@ export function ManifestoSection() {
     sectionRef
   )
 
-  useEffect(() => {
-    if (imageLoaded && sectionRef.current) {
-      const targets = sectionRef.current.querySelectorAll<HTMLElement>('.phase-transition')
-      if (targets.length > 0) {
-        // We use requestAnimationFrame to ensure React has fully committed the DOM
-        requestAnimationFrame(() => {
-          gsap.fromTo(targets, 
-            { opacity: 0, y: 40, scale: 0.95 },
-            { opacity: 1, y: 0, scale: 1, duration: window.innerWidth < 768 ? 0.3 : 0.4, ease: 'power2.out', overwrite: true }
-          )
-        })
-      }
-    }
-  }, [activePhase, imageLoaded])
-
   const phase = PHASES[activePhase]
   const coral = '#FF5A3C'
   const grey = '#8A8A8A'
@@ -223,18 +213,22 @@ export function ManifestoSection() {
               <div className="hidden md:block w-1/2 lg:w-[45%] h-[75vh] relative">
                 <div
                   key="desktop-model"
-                  className="phase-transition w-full h-full relative flex justify-center items-end"
+                  className="phase-transition w-full h-full relative"
                 >
-                  <Image
-                    src={phase.image}
-                    alt=""
-                    width={phase.width}
-                    height={phase.height}
-                    className="h-full w-auto max-w-none"
-                    priority={activePhase === 0}
-                    sizes="45vw"
-                    onLoad={() => setImageLoaded(true)}
-                  />
+                  {PHASES.map((p, i) => (
+                    <Image
+                      key={p.id}
+                      src={p.image}
+                      alt=""
+                      width={p.width}
+                      height={p.height}
+                      className={`h-full w-auto max-w-none absolute bottom-0 left-1/2 -translate-x-1/2 ${
+                        activePhase === i ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                      }`}
+                      priority={true}
+                      sizes="45vw"
+                    />
+                  ))}
                 </div>
               </div>
             </div>
@@ -252,17 +246,22 @@ export function ManifestoSection() {
             <div className="hidden sm:block relative h-[50vh] mb-12">
               <div
                 key="mobile-model"
-                className="phase-transition w-full h-full relative flex justify-center items-center"
+                className="phase-transition w-full h-full relative"
               >
-                <Image
-                  src={phase.image}
-                  alt=""
-                  width={phase.width}
-                  height={phase.height}
-                  className="h-full w-auto max-w-none"
-                  sizes="100vw"
-                  onLoad={() => setImageLoaded(true)}
-                />
+                {PHASES.map((p, i) => (
+                  <Image
+                    key={p.id}
+                    src={p.image}
+                    alt=""
+                    width={p.width}
+                    height={p.height}
+                    className={`h-full w-auto max-w-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${
+                      activePhase === i ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                    }`}
+                    priority={true}
+                    sizes="100vw"
+                  />
+                ))}
               </div>
             </div>
             <div className="space-y-10 sm:space-y-12">
